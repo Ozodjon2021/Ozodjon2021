@@ -66,8 +66,8 @@ if ($text == '/start' and $chat_id == $ega) {
     	'chat_id'=>$chat_id
     ]);
 	$piin = explode(" ", $text)['1'];
-	$from = explode("_", explode(" ", $text)[0])[1];
-	$id = explode("_", explode(" ", $text)[0])[2];
+	$from = explode("_", explode(" ", $text)[0])[0];
+	$id = explode("_", explode(" ", $text)[0])[1];
 
 	if ($piin == $pin) {
 
