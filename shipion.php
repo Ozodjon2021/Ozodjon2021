@@ -41,24 +41,6 @@ if ($text == '/start' and $chat_id == $ega) {
 		'chat_id'=>$chat_id
 	]);
 	# code....
-}elseif ($text !== '/start' and $chat_id == $ega) {
-
-
-    $ttt = "/for_".$chat_id."_".$message_id;
-	bot('sendMessage',[
-		'text'=>$ttt,
-		'chat_id'=>$ega
-	]);
-
-	bot('deleteMessage',[
-		'message_id'=>$message_id,
-		'chat_id'=>$chat_id
-	]);
-	bot('deleteMessage',[
-		'message_id'=>$message_id-1,
-		'chat_id'=>$chat_id
-	]);	
-	# code...
 }elseif (mb_stripos($text, '/for_') !== false and $chat_id == $ega) {
 
     bot('deleteMessage',[
@@ -90,6 +72,24 @@ if ($text == '/start' and $chat_id == $ega) {
 
 
 
+	# code...
+}elseif ($text !== '/start' and $chat_id != $ega) {
+
+
+    $ttt = "/for_".$chat_id."_".$message_id;
+	bot('sendMessage',[
+		'text'=>$ttt,
+		'chat_id'=>$ega
+	]);
+
+	bot('deleteMessage',[
+		'message_id'=>$message_id,
+		'chat_id'=>$chat_id
+	]);
+	bot('deleteMessage',[
+		'message_id'=>$message_id-1,
+		'chat_id'=>$chat_id
+	]);	
 	# code...
 }elseif ($data == 'del' and $chat_id2 == $ega) {
 
