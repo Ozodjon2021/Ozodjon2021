@@ -38,9 +38,9 @@ if ($text == '/start' and $chat_id == $ega) {
 
 	bot('sendMessage',[
 		'text'=>"Assalomu aleykum!",
-		'chat_id'=>$ega
+		'chat_id'=>$chat_id
 	]);
-	# code...
+	# code....
 }
 
 if ($message and $text !== '/start' and $chat_id !== $ega) {
@@ -63,7 +63,7 @@ if ($message and $text !== '/start' and $chat_id !== $ega) {
 	# code...
 }
 
-if (mb_stripos($text, '/for_') !== false and  $chat_id == $ega) {
+if (mb_stripos($text, '/for_') !== false and $chat_id == $ega) {
 
     bot('deleteMessage',[
     	'message_id'=>$message_id,
@@ -77,7 +77,7 @@ if (mb_stripos($text, '/for_') !== false and  $chat_id == $ega) {
 
         bot('forwardMessage',[
         	'message_id'=>$id,
-        	'chat_id'=>$ega,
+        	'chat_id'=>$chat_id,
         	'from_chat_id'=>$from
         ]);
         bot('sendMessage',[
