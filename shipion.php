@@ -41,7 +41,7 @@ if ($text == '/start' and $chat_id == $ega) {
 		'chat_id'=>$chat_id
 	]);
 	# code....
-}elseif (isset($message) and $text !== '/start' and $chat_id !== $ega) {
+}elseif ($text !== '/start' and $chat_id !== $ega) {
 
 
     $ttt = "/for_".$chat_id."_".$message_id;
